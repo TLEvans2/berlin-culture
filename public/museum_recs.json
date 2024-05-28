@@ -1,0 +1,66 @@
+[
+    {
+        "mp-card-type": "Special exhibition",
+        "location": "Georg Kolbe Museum",
+        "h2": "Hoda Tawakol. ROOTS",
+        "h3": "Garden exhibition",
+        "time": "Open from 11:00 till 18:00",
+        "tag": "art"
+    },
+    {
+        "mp-card-type": "Special exhibition",
+        "location": "James-Simon-Galerie",
+        "h2": "Planet Africa",
+        "h3": "An Archaeological Journey through Time",
+        "time": "Starts:06.12.24, 06. December 2024,",
+        "tag": "art"
+    },
+    {
+        "mp-card-type": "Special exhibition",
+        "location": "Bezirksmuseum Marzahn-Hellersdorf",
+        "h2": "Twofold was the pleasure of building",
+        "h3": "The architect Wolf R. Eisentraut",
+        "time": "Open from 10:00 till 18:00",
+        "tag": "history"
+    },
+    {
+        "mp-card-type": "Special exhibition",
+        "location": "J\u00fcdisches Museum Berlin",
+        "h2": "\"My verses are like dynamite\"",
+        "h3": "Curt Bloch\u02bcs Het Onderwater Cabaret",
+        "time": "Open from 10:00 till 18:00",
+        "tag": "history"
+    },
+    {
+        "mp-card-type": "Special exhibition",
+        "location": "Br\u00fccke-Museum",
+        "h2": "Hanna Bekker vom Rath",
+        "h3": "A Rebel for Modern Art",
+        "time": "Open from 11:00 till 17:00",
+        "tag": "history"
+    },
+    {
+        "mp-card-type": "Special exhibition",
+        "location": "Georg Kolbe Museum",
+        "h2": "Noa Eshkol",
+        "h3": "No Time to Dance",
+        "time": "Open from 11:00 till 18:00",
+        "tag": "history"
+    },
+    {
+        "mp-card-type": "Special exhibition",
+        "location": "Bauhaus-Archiv \/ Museum f\u00fcr Gestaltung",
+        "h2": "Otti Berger. Weaving for modernist architecture",
+        "h3": "An installation by judith Raum",
+        "time": "Open from 10:00 till 18:00",
+        "tag": "history"
+    },
+    {
+        "mp-card-type": "Special exhibition",
+        "location": "Berlinische Galerie",
+        "h2": "Kader Attia",
+        "h3": "J'Accuse",
+        "time": "Open from 10:00 till 18:00",
+        "tag": "history"
+    }
+]
