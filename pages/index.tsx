@@ -11,7 +11,7 @@ export default function Home() {
     <Flex direction="column" gap="9" style={{ maxWidth: '960px', margin: '5rem auto 0' }}>
       <Flex direction="column" gap="6" align="center">
         <img src="vercel.svg" style={{ width: '150px' }} />
-        <Heading size="9">Tom (anus)</Heading>
+        <Heading size="9">Berlin Culture Vulture</Heading>
         <img src="next.svg" style={{ width: '150px' }} />
       </Flex>
 
@@ -29,7 +29,7 @@ export default function Home() {
                 <Table.Row>
                   <Table.ColumnHeaderCell>Title</Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell>Date</Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell>Description</Table.ColumnHeaderCell>
+                  <Table.ColumnHeaderCell style={{ width: '40%' }}>Description</Table.ColumnHeaderCell>
                 </Table.Row>
               </Table.Header>
 
