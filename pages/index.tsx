@@ -13,7 +13,7 @@ export default function Home() {
       <Flex direction="column" gap="6" align="center">
         <img src="cuvu.svg" style={{ width: '350px' }} />
         <div style={{ maxWidth: '960px', textAlign: 'justify' }}>
-          <Heading size="10" style={{ textAlign: 'justify' }}>
+          <Heading size="5" style={{ textAlign: 'justify' }}>
             Do you ever get to the weekend and not know what to do?
             <br />
             <br />
