@@ -11,15 +11,13 @@ export default function Home() {
   return (
     <Flex direction="column" gap="5" style={{ maxWidth: '960px', margin: '5rem auto 0' }}>
       <Flex direction="column" gap="6" align="center">
-        <img src="Berlin.svg.png" style={{ width: '50px' }} />
-        <Heading size="9">Berlin Culture Vulture</Heading>
-        <img src="ber-cult.jpeg" style={{ width: '1000px' }} />
+        <img src="cuvu.svg" style={{ width: '350px' }} />
         <div style={{ maxWidth: '960px', textAlign: 'justify' }}>
-          <Heading size="5" style={{ textAlign: 'justify' }}>
+          <Heading size="10" style={{ textAlign: 'justify' }}>
             Do you ever get to the weekend and not know what to do?
             <br />
             <br />
-            Are you ever annoyed that things are happening all over the city and you always seem to miss them?
+            Are you ever annoyed that stuff is happening all over the city and you always seem to miss it?
             <br />
             <br /> {/* Adds a larger gap */}
             Fear not!
@@ -29,12 +27,15 @@ export default function Home() {
             <br />
             <br />
             <span style={{ fontWeight: 'bold' }}>Have a great weekend!</span>
+            <br />
+            <br />
           </p>
+          <img src="ber-cult.jpeg" style={{ width: '1000px' }} />
         </div>
       </Flex>
 
       <Tabs.Root defaultValue='films' style={{ marginTop: '1px' }}>
-        <Tabs.List>
+        <Tabs.List color="pink">
           <Tabs.Trigger value="films" style={{ fontSize: '18px' }} >Films</Tabs.Trigger>
           <Tabs.Trigger value="events" style={{ fontSize: '18px' }} >Events </Tabs.Trigger>
           <Tabs.Trigger value="museum" style={{ fontSize: '18px' }} >Museum</Tabs.Trigger>
@@ -87,7 +88,7 @@ export default function Home() {
                       <Table.RowHeaderCell>{data.location}</Table.RowHeaderCell>
                       <Table.Cell>{data.h3}</Table.Cell>
                       <Table.Cell>
-                        <Button color="gray" variant="solid" asChild>
+                        <Button color="pink" variant="solid" asChild>
                           <Link href={data.h3} target='_blank'>Book now</Link>
                         </Button>
                       </Table.Cell>
@@ -122,7 +123,7 @@ export default function Home() {
                         <img src={data['Image URL']} alt={data.Title} style={{ width: '100px', height: 'auto' }} />
                       </Table.Cell>
                       <Table.Cell style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-                        <Button color="gray" variant="solid" asChild>
+                        <Button color="pink" variant="solid" asChild>
                           <Link href={data.Link} target='_blank'>Book now</Link>
                         </Button>
                       </Table.Cell>
