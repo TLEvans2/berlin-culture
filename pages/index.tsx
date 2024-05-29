@@ -9,18 +9,35 @@ import filmData from '../public/film_recs.json'
 
 export default function Home() {
   return (
-    <Flex direction="column" gap="9" style={{ maxWidth: '960px', margin: '5rem auto 0' }}>
+    <Flex direction="column" gap="5" style={{ maxWidth: '960px', margin: '5rem auto 0' }}>
       <Flex direction="column" gap="6" align="center">
         <img src="Berlin.svg.png" style={{ width: '50px' }} />
         <Heading size="9">Berlin Culture Vulture</Heading>
         <img src="ber-cult.jpeg" style={{ width: '1000px' }} />
+        <div style={{ maxWidth: '960px', textAlign: 'justify' }}>
+          <Heading size="5" style={{ textAlign: 'justify' }}>
+            Do you ever get to the weekend and not know what to do?
+            <br />
+            <br />
+            Are you ever annoyed that things are happening all over the city and you always seem to miss them?
+            <br />
+            <br /> {/* Adds a larger gap */}
+            Fear not!
+          </Heading>
+          <p style={{ textAlign: 'justify', marginBottom: '0.1px' }}>
+            This website uses machine learning algorithms and natural language processing to suggest things that might be interesting to you. Toggle between film, museum exhibition and event recommendations and have the most cultured weekend of your life! If you do not like the suggestions, you can just train your own model 😊
+            <br />
+            <br />
+            <span style={{ fontWeight: 'bold' }}>Have a great weekend!</span>
+          </p>
+        </div>
       </Flex>
 
-      <Tabs.Root defaultValue='films'>
+      <Tabs.Root defaultValue='films' style={{ marginTop: '1px' }}>
         <Tabs.List>
-          <Tabs.Trigger value="films">Films</Tabs.Trigger>
-          <Tabs.Trigger value="events">Events</Tabs.Trigger>
-          <Tabs.Trigger value="museum">Museum</Tabs.Trigger>
+          <Tabs.Trigger value="films" style={{ fontSize: '18px' }} >Films</Tabs.Trigger>
+          <Tabs.Trigger value="events" style={{ fontSize: '18px' }} >Events </Tabs.Trigger>
+          <Tabs.Trigger value="museum" style={{ fontSize: '18px' }} >Museum</Tabs.Trigger>
         </Tabs.List>
 
         <Box pt="3">
@@ -70,7 +87,7 @@ export default function Home() {
                       <Table.RowHeaderCell>{data.location}</Table.RowHeaderCell>
                       <Table.Cell>{data.h3}</Table.Cell>
                       <Table.Cell>
-                        <Button variant="solid" asChild>
+                        <Button color="gray" variant="solid" asChild>
                           <Link href={data.h3} target='_blank'>Book now</Link>
                         </Button>
                       </Table.Cell>
@@ -90,7 +107,7 @@ export default function Home() {
                   <Table.ColumnHeaderCell>Title</Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell>IMDB Rating</Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell>Link</Table.ColumnHeaderCell>
+                  <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell style={{ width: '113px' }} />
                 </Table.Row>
               </Table.Header>
@@ -99,13 +116,13 @@ export default function Home() {
                 {filmData.map((data, idx) => {
                   return (
                     <Table.Row key={idx}>
-                      <Table.Cell>{data.Title}</Table.Cell>
+                      <Table.Cell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data.Title}</Table.Cell>
                       <Table.RowHeaderCell>{data['Aggregate Rating']}</Table.RowHeaderCell>
                       <Table.Cell>
                         <img src={data['Image URL']} alt={data.Title} style={{ width: '100px', height: 'auto' }} />
                       </Table.Cell>
-                      <Table.Cell>
-                        <Button variant="solid" asChild>
+                      <Table.Cell style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+                        <Button color="gray" variant="solid" asChild>
                           <Link href={data.Link} target='_blank'>Book now</Link>
                         </Button>
                       </Table.Cell>
