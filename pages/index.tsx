@@ -16,7 +16,7 @@ export default function Home() {
         <img src="ber-cult.jpeg" style={{ width: '1000px' }} />
       </Flex>
 
-      <Tabs.Root defaultValue='films' align="center">
+      <Tabs.Root defaultValue='films'>
         <Tabs.List>
           <Tabs.Trigger value="films">Films</Tabs.Trigger>
           <Tabs.Trigger value="events">Events</Tabs.Trigger>
