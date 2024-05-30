@@ -5,7 +5,7 @@ import '@radix-ui/themes/styles.css';
 
 import eventsData from '../public/events_table_final.json'
 import museumData from '../public/museum_recs_final.json'
-import filmData from '../public/film_recs.json'
+import filmData from '../public/film_recs_final_2.json'
 
 export default function Home() {
   return (
@@ -82,8 +82,8 @@ export default function Home() {
             <Table.Root>
               <Table.Header>
                 <Table.Row>
-                  <Table.ColumnHeaderCell style={{ width: '30%' }}>Title</Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell style={{ width: '30%' }}></Table.ColumnHeaderCell>
+                  <Table.ColumnHeaderCell style={{ width: '25%' }}>Title</Table.ColumnHeaderCell>
+                  <Table.ColumnHeaderCell style={{ width: '25%' }}></Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell style={{ width: '10%' }}>Location</Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell style={{ width: '30%' }}>Description</Table.ColumnHeaderCell>
 
@@ -97,7 +97,7 @@ export default function Home() {
                     <Table.Row key={idx}>
                       <Table.RowHeaderCell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data.h2}</Table.RowHeaderCell>
                       <Table.Cell>
-                        <img src={data['Image']} alt={data.Title} style={{ maxWidth: '200px', height: 'auto' }} />
+                        <img src={data['Image']} alt={data.Title} style={{ maxWidth: '150px', height: 'auto' }} />
                       </Table.Cell>
                       <Table.Cell>{data.location}</Table.Cell>
                       <Table.Cell>{data.h3}</Table.Cell>
@@ -120,7 +120,8 @@ export default function Home() {
               <Table.Header>
                 <Table.Row>
                   <Table.ColumnHeaderCell style={{ width: '20%' }}>Title</Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell style={{ width: '50%' }}></Table.ColumnHeaderCell>
+                  <Table.ColumnHeaderCell style={{ width: '20%' }}></Table.ColumnHeaderCell>
+                  <Table.ColumnHeaderCell style={{ width: '40%' }}>Summary</Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell>IMDB Rating</Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
                   <Table.ColumnHeaderCell style={{ width: '113px' }} />
@@ -135,7 +136,8 @@ export default function Home() {
                       <Table.Cell>
                         <img src={data['Image URL']} alt={data.Title} style={{ width: '200px', height: 'auto' }} />
                       </Table.Cell>
-                      <Table.RowHeaderCell>{data['Aggregate Rating']}</Table.RowHeaderCell>
+                      <Table.Cell style={{ fontSize: '15px', alignItems: 'center' }}>{data.Plot}</Table.Cell>
+                      <Table.RowHeaderCell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data['Aggregate Rating']}</Table.RowHeaderCell>
                       <Table.Cell style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
                         <Button color="pink" variant="solid" asChild>
                           <Link href={data.Link} target='_blank'>Book now</Link>
