@@ -97,7 +97,7 @@ export default function Home() {
                     <Table.Row key={idx}>
                       <Table.RowHeaderCell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data.h2}</Table.RowHeaderCell>
                       <Table.Cell>
-                        <img src={data['Image']} alt={data.Title} style={{ maxWidth: '150px', height: 'auto' }} />
+                        <img src={data['Image']} alt={data.h2} style={{ maxWidth: '150px', height: 'auto' }} />
                       </Table.Cell>
                       <Table.Cell>{data.location}</Table.Cell>
                       <Table.Cell>{data.h3}</Table.Cell>
