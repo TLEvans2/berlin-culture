@@ -4,7 +4,7 @@ import Link from 'next/link'
 import '@radix-ui/themes/styles.css';
 
 import eventsData from '../public/events_table_final.json'
-import museumData from '../public/museum_recs_final.json'
+import museumData from '../public/museum_recs_final_2.json'
 import filmData from '../public/film_recs_final_2.json'
 
 export default function Home() {
@@ -13,17 +13,13 @@ export default function Home() {
       <Flex direction="column" gap="6" align="center">
         <img src="cuvu.svg" style={{ width: '350px' }} />
         <div style={{ maxWidth: '960px', textAlign: 'justify' }}>
-          <Heading size="5" style={{ textAlign: 'justify' }}>
+          <Heading size="7" style={{ textAlign: 'justify' }}>
             Do you ever get to the weekend and not know what to do?
             <br />
             <br />
-            Are you ever annoyed that stuff is happening all over the city and you always seem to miss it?
-            <br />
-            <br /> {/* Adds a larger gap */}
-            Fear not!
           </Heading>
           <p style={{ textAlign: 'justify', marginBottom: '0.1px' }}>
-            This website uses machine learning algorithms and natural language processing to suggest things that might be interesting to you. Toggle between film, museum exhibition and event recommendations and have the most cultured weekend of your life! If you do not like the suggestions, you can just train your own model 😊
+            This website uses machine learning algorithms and natural language processing to suggest things that might be interesting to you, based on things that are interesting to me. Toggle between film, museum exhibition and event recommendations and enjoy the most cultured weekend of your life.
             <br />
             <br />
             <span style={{ fontWeight: 'bold' }}>Have a great weekend!</span>
