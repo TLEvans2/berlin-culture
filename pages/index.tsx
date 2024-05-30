@@ -1,4 +1,4 @@
-import { Flex, Table, Heading, Tabs, Box, Button } from '@radix-ui/themes';
+import { Flex, Table, Heading, Tabs, Box, Button, ScrollArea } from '@radix-ui/themes';
 import Link from 'next/link'
 
 import '@radix-ui/themes/styles.css';
@@ -43,112 +43,112 @@ export default function Home() {
 
         <Box pt="3">
           <Tabs.Content value="events">
+            <ScrollArea type="always" scrollbars="vertical" style={{ height: 500 }}>
+              <Table.Root>
 
-            <Table.Root>
-              <Table.Header>
-                <Table.Row>
-                  <Table.ColumnHeaderCell>Title</Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell>Date</Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell style={{ width: '40%' }}>Description</Table.ColumnHeaderCell>
-                </Table.Row>
-              </Table.Header>
+                <Table.Header>
+                  <Table.Row>
+                    <Table.ColumnHeaderCell style={{ width: '15%' }}>Title</Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell>Date</Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell style={{ width: '30%' }}>Description</Table.ColumnHeaderCell>
+                  </Table.Row>
+                </Table.Header>
 
-              <Table.Body>
-                {eventsData.map(data => {
-                  return (
-                    <Table.Row key={data.translated_title}>
-                      <Table.RowHeaderCell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data.translated_title}</Table.RowHeaderCell>
-                      <Table.Cell>
-                        <img src={data['Image']} alt={data.Title} style={{ maxWidth: '200px', height: 'auto' }} />
-                      </Table.Cell>
-                      <Table.Cell style={{ width: '100px' }}>{data.translated_date}</Table.Cell>
-                      <Table.Cell style={{ width: '400px' }}>{data.translated_text}</Table.Cell>
-                      <Table.Cell style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-                        <Button color="pink" variant="solid" asChild>
-                          <Link href={data.Link} target='_blank'>Learn more</Link>
-                        </Button>
-                      </Table.Cell>
-                    </Table.Row>
-                  )
-                })}
-              </Table.Body>
-            </Table.Root>
-
+                <Table.Body>
+                  {eventsData.map(data => {
+                    return (
+                      <Table.Row key={data.translated_title}>
+                        <Table.RowHeaderCell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data.translated_title}</Table.RowHeaderCell>
+                        <Table.Cell>
+                          <img src={data['Image']} alt={data.Title} style={{ maxWidth: '200px', height: 'auto' }} />
+                        </Table.Cell>
+                        <Table.Cell style={{ width: '100px' }}>{data.translated_date}</Table.Cell>
+                        <Table.Cell style={{ width: '400px' }}>{data.translated_text}</Table.Cell>
+                        <Table.Cell style={{ display: 'flex', justifyContent: 'center', height: '100%' }}>
+                          <Button color="pink" variant="solid" asChild>
+                            <Link href={data.Link} target='_blank'>Learn more</Link>
+                          </Button>
+                        </Table.Cell>
+                      </Table.Row>
+                    )
+                  })}
+                </Table.Body>
+              </Table.Root>
+            </ScrollArea>
           </Tabs.Content>
 
           <Tabs.Content value="museum">
+            <ScrollArea type="always" scrollbars="vertical" style={{ height: 500 }}>
+              <Table.Root>
+                <Table.Header>
+                  <Table.Row>
+                    <Table.ColumnHeaderCell style={{ width: '25%' }}>Title</Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell style={{ width: '25%' }}></Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell style={{ width: '10%' }}>Location</Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell style={{ width: '20%' }}>Description</Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
+                  </Table.Row>
+                </Table.Header>
 
-            <Table.Root>
-              <Table.Header>
-                <Table.Row>
-                  <Table.ColumnHeaderCell style={{ width: '25%' }}>Title</Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell style={{ width: '25%' }}></Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell style={{ width: '10%' }}>Location</Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell style={{ width: '30%' }}>Description</Table.ColumnHeaderCell>
-
-                  <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
-                </Table.Row>
-              </Table.Header>
-
-              <Table.Body>
-                {museumData.map((data, idx) => {
-                  return (
-                    <Table.Row key={idx}>
-                      <Table.RowHeaderCell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data.h2}</Table.RowHeaderCell>
-                      <Table.Cell>
-                        <img src={data['Image']} alt={data.h2} style={{ maxWidth: '150px', height: 'auto' }} />
-                      </Table.Cell>
-                      <Table.Cell>{data.location}</Table.Cell>
-                      <Table.Cell>{data.h3}</Table.Cell>
-                      <Table.Cell style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-                        <Button color="pink" variant="solid" asChild>
-                          <Link href={data.Link} target='_blank'>Book now</Link>
-                        </Button>
-                      </Table.Cell>
-                    </Table.Row>
-                  )
-                })}
-              </Table.Body>
-            </Table.Root>
-
+                <Table.Body>
+                  {museumData.map((data, idx) => {
+                    return (
+                      <Table.Row key={idx}>
+                        <Table.RowHeaderCell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data.h2}</Table.RowHeaderCell>
+                        <Table.Cell>
+                          <img src={data['Image']} alt={data.h2} style={{ maxWidth: '150px', height: 'auto' }} />
+                        </Table.Cell>
+                        <Table.Cell>{data.location}</Table.Cell>
+                        <Table.Cell>{data.h3}</Table.Cell>
+                        <Table.Cell style={{ display: 'flex', justifyContent: 'center', height: '100%' }}>
+                          <Button color="pink" variant="solid" asChild>
+                            <Link href={data.Link} target='_blank'>Book now</Link>
+                          </Button>
+                        </Table.Cell>
+                      </Table.Row>
+                    )
+                  })}
+                </Table.Body>
+              </Table.Root>
+            </ScrollArea>
           </Tabs.Content>
 
           <Tabs.Content value="films">
+            <ScrollArea type="always" scrollbars="vertical" style={{ height: 500 }}>
+              <Table.Root>
+                <Table.Header>
+                  <Table.Row>
+                    <Table.ColumnHeaderCell style={{ width: '20%' }}>Title</Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell style={{ width: '20%' }}></Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell style={{ width: '40%' }}>Summary</Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell>IMDB Rating</Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
+                    <Table.ColumnHeaderCell style={{ width: '113px' }} />
+                  </Table.Row>
+                </Table.Header>
 
-            <Table.Root>
-              <Table.Header>
-                <Table.Row>
-                  <Table.ColumnHeaderCell style={{ width: '20%' }}>Title</Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell style={{ width: '20%' }}></Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell style={{ width: '40%' }}>Summary</Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell>IMDB Rating</Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell></Table.ColumnHeaderCell>
-                  <Table.ColumnHeaderCell style={{ width: '113px' }} />
-                </Table.Row>
-              </Table.Header>
-
-              <Table.Body>
-                {filmData.map((data, idx) => {
-                  return (
-                    <Table.Row key={idx}>
-                      <Table.Cell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data.Title}</Table.Cell>
-                      <Table.Cell>
-                        <img src={data['Image URL']} alt={data.Title} style={{ width: '200px', height: 'auto' }} />
-                      </Table.Cell>
-                      <Table.Cell style={{ fontSize: '15px', alignItems: 'center' }}>{data.Plot}</Table.Cell>
-                      <Table.RowHeaderCell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data['Aggregate Rating']}</Table.RowHeaderCell>
-                      <Table.Cell style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-                        <Button color="pink" variant="solid" asChild>
-                          <Link href={data.Link} target='_blank'>Book now</Link>
-                        </Button>
-                      </Table.Cell>
-                    </Table.Row>
-                  )
-                })}
-              </Table.Body>
-            </Table.Root>
-
+                <Table.Body>
+                  {filmData.map((data, idx) => {
+                    return (
+                      <Table.Row key={idx}>
+                        <Table.Cell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data.Title}</Table.Cell>
+                        <Table.Cell>
+                          <img src={data['Image URL']} alt={data.Title} style={{ width: '200px', height: 'auto' }} />
+                        </Table.Cell>
+                        <Table.Cell style={{ fontSize: '15px', alignItems: 'center' }}>{data.Plot}</Table.Cell>
+                        <Table.RowHeaderCell style={{ fontWeight: 'bold', fontSize: '20px' }}>{data['Aggregate Rating']}</Table.RowHeaderCell>
+                        <Table.Cell style={{ display: 'flex', justifyContent: 'center', height: '100%' }}>
+                          <Button color="pink" variant="solid" asChild>
+                            <Link href={data.Link} target='_blank'>Book now</Link>
+                          </Button>
+                        </Table.Cell>
+                      </Table.Row>
+                    )
+                  })}
+                </Table.Body>
+              </Table.Root>
+            </ScrollArea>
           </Tabs.Content>
         </Box>
       </Tabs.Root>
