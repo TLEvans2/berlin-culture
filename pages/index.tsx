@@ -34,7 +34,7 @@ export default function Home() {
         <Tabs.List color="pink">
           <Tabs.Trigger value="films" style={{ fontSize: '18px' }} >Films</Tabs.Trigger>
           <Tabs.Trigger value="events" style={{ fontSize: '18px' }} >Events </Tabs.Trigger>
-          <Tabs.Trigger value="museum" style={{ fontSize: '18px' }} >Museum</Tabs.Trigger>
+          <Tabs.Trigger value="museum" style={{ fontSize: '18px' }} >Museums</Tabs.Trigger>
         </Tabs.List>
 
         <Box pt="3">
