@@ -1,3 +1,10 @@
+## Python and data frames
+You can find all of the python scripts that were used to create the tables in the Python folder
+You can find the final presentation here, remove brackets to be able to click: (https://docs.google.com/)presentation/d/1yGuQzR9m69qGydyg-JR32edfzCRVaub9Rkc5Pro09rY/edit?usp=sharing 
+
+## Files 
+Important files are stored in the Public folder, including all images and tables
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -34,3 +41,4 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
